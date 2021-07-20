@@ -1,47 +1,49 @@
 import { Category } from "../../Model/Category";
 import {
-  ICategoriesRepository,
-  ICreateCategoryDTO,
+    ICategoriesRepository,
+    ICreateCategoryDTO,
 } from "../ICategoriesRepository";
 
 class CategoriesRepository implements ICategoriesRepository {
-  private categories: Category[];
+    private categories: Category[];
 
-  private static INSTANCE: CategoriesRepository;
+    private static INSTANCE: CategoriesRepository;
 
-  constructor() {
-    this.categories = [];
-  }
-
-  public static getInstace(): CategoriesRepository {
-    if (!CategoriesRepository.INSTANCE) {
-      CategoriesRepository.INSTANCE = new CategoriesRepository();
+    constructor() {
+        this.categories = [];
     }
 
-    return CategoriesRepository.INSTANCE;
-  }
+    public static getInstace(): CategoriesRepository {
+        if (!CategoriesRepository.INSTANCE) {
+            CategoriesRepository.INSTANCE = new CategoriesRepository();
+        }
 
-  create({ name, description }: ICreateCategoryDTO): void {
-    const category = new Category();
+        return CategoriesRepository.INSTANCE;
+    }
 
-    Object.assign(category, {
-      name,
-      description,
-      created_at: new Date(),
-    });
+    create({ name, description }: ICreateCategoryDTO): void {
+        const category = new Category();
 
-    this.categories.push(category);
-  }
+        Object.assign(category, {
+            name,
+            description,
+            created_at: new Date(),
+        });
 
-  list(): Category[] {
-    return this.categories;
-  }
+        this.categories.push(category);
+    }
 
-  findByName(name: string): Category {
-    const category = this.categories.find((category) => category.name === name);
+    list(): Category[] {
+        return this.categories;
+    }
 
-    return category;
-  }
+    findByName(name: string): Category {
+        const category = this.categories.find(
+            (category) => category.name === name
+        );
+
+        return category;
+    }
 }
 
 export { CategoriesRepository };

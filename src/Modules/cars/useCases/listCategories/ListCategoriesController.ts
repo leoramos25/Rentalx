@@ -3,13 +3,13 @@ import { Request, Response } from "express";
 import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
 
 class ListCategoriesController {
-  constructor(private listCategoriesUseCase: ListCategoriesUseCase) {}
+    constructor(private listCategoriesUseCase: ListCategoriesUseCase) {}
 
-  handle(request: Request, response: Response): Response {
-    const list = this.listCategoriesUseCase.execute();
+    handle(request: Request, response: Response): Response {
+        const list = this.listCategoriesUseCase.execute();
 
-    return response.json(list);
-  }
+        return response.json(list);
+    }
 }
 
 export { ListCategoriesController };

@@ -5,7 +5,7 @@ import { ListCategoriesUseCase } from "./ListCategoriesUseCase";
 const categoriesRepository = CategoriesRepository.getInstace();
 const listCategoriesUseCase = new ListCategoriesUseCase(categoriesRepository);
 const listCategoriesController = new ListCategoriesController(
-  listCategoriesUseCase
+    listCategoriesUseCase
 );
 
 export { listCategoriesController };
