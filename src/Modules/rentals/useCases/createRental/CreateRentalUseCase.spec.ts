@@ -33,7 +33,7 @@ describe("Create rental", () => {
         expect(rental).toHaveProperty("start_date");
     });
 
-    it("should not be able to create a new rental if there is another open to the same user", async () => {
+    it("should not be able to create a new rental if there is another open to the same user", () => {
         expect(async () => {
             await createRentalUseCase.execute({
                 user_id: "1234",
@@ -49,7 +49,7 @@ describe("Create rental", () => {
         }).rejects.toBeInstanceOf(AppError);
     });
 
-    it("should not be able to create a new rental if there is another open to the same user", async () => {
+    it("should not be able to create a new rental if there is another open to the same user", () => {
         expect(async () => {
             await createRentalUseCase.execute({
                 user_id: "123",
@@ -65,7 +65,7 @@ describe("Create rental", () => {
         }).rejects.toBeInstanceOf(AppError);
     });
 
-    it("should not be able to create a new rental with invalid return time", async () => {
+    it("should not be able to create a new rental with invalid return time", () => {
         expect(async () => {
             await createRentalUseCase.execute({
                 user_id: "1234",
