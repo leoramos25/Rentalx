@@ -2,3 +2,4 @@ node_modules/
 *.vscode
 *.png
 yarn-error.log
+covarage/
