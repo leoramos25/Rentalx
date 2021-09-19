@@ -9,6 +9,7 @@ class ListRentalsByUserUseCase {
         @inject("RentalsRepository")
         private rentalsRepository: IRentalsRepository
     ) {}
+
     async execute(user_id: string): Promise<Rental[]> {
         const rentalsByUser = await this.rentalsRepository.findByUserId(
             user_id
