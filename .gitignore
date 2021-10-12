@@ -1,5 +1,9 @@
-node_modules/
-*.vscode
-*.png
-yarn-error.log
-covarage/
+node_modules
+.vscode
+tmp/*
+coverage
+.env
+!tmp/.gitkeep
+dist
+ormconfig.json
+package-lock.json
