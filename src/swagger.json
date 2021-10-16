@@ -181,7 +181,9 @@
         },
         "/cars": {
             "post": {
-                "tags": ["Cars"],
+                "tags": [
+                    "Cars"
+                ],
                 "summary": "Create a new car",
                 "description": "Create a new car",
                 "security": [
@@ -210,7 +212,9 @@
         },
         "/cars/images/{id}": {
             "post": {
-                "tags": ["Cars"],
+                "tags": [
+                    "Cars"
+                ],
                 "summary": "Upload images",
                 "description": "Upload images",
                 "security": [

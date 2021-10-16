@@ -19,10 +19,10 @@ const userProfileController = new UserProfileController();
 usersRoutes.post("/", createUsersController.handle);
 
 usersRoutes.patch(
-    "/avatar",
-    ensureAuthenticated,
-    uploadAvatar.single("avatar"),
-    updateUserAvatarController.handle
+  "/avatar",
+  ensureAuthenticated,
+  uploadAvatar.single("avatar"),
+  updateUserAvatarController.handle
 );
 
 usersRoutes.get("/profile", ensureAuthenticated, userProfileController.handle);

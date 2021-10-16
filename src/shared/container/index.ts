@@ -18,33 +18,33 @@ import { RentalsRepository } from "@modules/rentals/infra/typeorm/repositories/R
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 
 container.registerSingleton<ICategoriesRepository>(
-    "CategoriesRepository",
-    CategoriesRepository
+  "CategoriesRepository",
+  CategoriesRepository
 );
 
 container.registerSingleton<ISpecificationsRepository>(
-    "SpecificationsRepository",
-    SpecificationsRepository
+  "SpecificationsRepository",
+  SpecificationsRepository
 );
 
 container.registerSingleton<IUsersRepository>(
-    "UsersRepository",
-    UsersRepository
+  "UsersRepository",
+  UsersRepository
 );
 
 container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository);
 
 container.registerSingleton<ICarsImagesRepository>(
-    "CarsImagesRepository",
-    CarsImagesRepository
+  "CarsImagesRepository",
+  CarsImagesRepository
 );
 
 container.registerSingleton<IRentalsRepository>(
-    "RentalsRepository",
-    RentalsRepository
+  "RentalsRepository",
+  RentalsRepository
 );
 
 container.registerSingleton<IUsersTokensRepository>(
-    "UsersTokensRepository",
-    UsersTokensRepository
+  "UsersTokensRepository",
+  UsersTokensRepository
 );
